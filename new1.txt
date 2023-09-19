@@ -1,0 +1,32 @@
+<div class="component-background">
+    <app-header></app-header>
+    <button mat-button color="primary" class="view-orders-button" [routerLink]="['/myorders']">View My Orders</button>
+    <h2>Create Order</h2>
+  
+    <form [formGroup]="orderForm" (ngSubmit)="submitOrder()">
+        <!-- Order Items -->
+        <div formArrayName="items">
+          <div *ngFor="let item of orderItems.controls; let i = index" class="item-row">
+            <div [formGroupName]="i">
+              <mat-form-field appearance="fill">
+                <mat-label>Product</mat-label>
+                <mat-select formControlName="productId">
+                  <mat-option *ngFor="let product of products" [value]="product.productId">{{ product.productName }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                <input matInput formControlName="quantity" type="number" placeholder="Quantity">
+              </mat-form-field>
+              <button mat-button color="warn" (click)="removeItem(i)">Remove</button>
+            </div>
+          </div>
+        </div>
+    
+        <div *ngIf="orderItems.controls.length === 0">
+          <p>Please add at least one item to your order.</p>
+        </div>
+    
+        <button mat-button (click)="addItem()">Add Item</button>
+        <button mat-raised-button color="primary" type="submit">Create Order</button>
+      </form>
+  </div>

@@ -1,0 +1,20 @@
+[
+    {
+        "userId": 1,
+        "name": "Matthew",
+        "email": "mat@gmail.com",
+        "mobile": "9008976212",
+        "gender": "Male",
+        "age": 26,
+        "nationality": "Indian"
+    },
+    {
+        "userId": 2,
+        "name": "Hari",
+        "email": "hari@gmail.com",
+        "mobile": "8210976212",
+        "gender": "Male",
+        "age": 25,
+        "nationality": "Indian"
+    }
+]
