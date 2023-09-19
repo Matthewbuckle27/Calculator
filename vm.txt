@@ -1,0 +1,57 @@
+/home/thinknxt/gitLabCode/backend
+
+Mysql Server Details
+
+Host - 172.16.238.61
+Port - 3306
+database  - csp
+user - csp
+password - csp@123
+
+VM Details : 
+
+IP: 
+172.16.238.164
+login id : thinknxt
+password : welcome@123
+
+Environmental variables :
+
+echo $JAVA_HOME
+echo $PATH
+echo $CLASSPATH
+
+export JAVA_HOME = /usr/lib/jvm
+export CLASSPATH=/home/thinknxt/gitlabCode/backend/customer-session-portal-backend/target/classes:/home/thinknxt/gitlabCode/backend/customer-session-portal-backend/target/project-charter-0.0.1-SNAPSHOT.jar
+
+java -cp $CLASSPATH com.maveric.projectcharter.ProjectCharterApplication
+
+mvn dependency:tree
+jar tf /home/thinknxt/gitlabCode/backend/customer-session-portal-backend/target/project-charter-0.0.1-SNAPSHOT.jar
+
+
+java -cp /home/thinknxt/gitlabCode/backend/customer-session-portal-backend/target/project-charter-0.0.1-SNAPSHOT.jar com.maveric.projectcharter.ProjectCharterApplication
+
+Port Kill :
+
+top
+shift mc
+sudo kill -9 pid
+
+directory : 
+/home/thinknxt/gitlabCode
+
+Starting Application Backend:
+
+nohup java -jar /home/thinknxt/gitlabCode/backend/customer-session-portal-backend/target/project-charter-0.0.1-SNAPSHOT.jar &
+
+java -jar /home/thinknxt/gitlabCode/backend/customer-session-portal-backend/target/project-charter-0.0.1-SNAPSHOT.jar
+
+Starting Application Frontend: 
+
+nohup ng serve --host 0.0.0.0 --port 4200 &
+
+ng serve --host 0.0.0.0 --port 4200
+
+elasticsearch-reset-password -u elastic
+kYtZF1OhLjjCT065fMAX
