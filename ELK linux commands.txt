@@ -25,7 +25,25 @@ sudo nano /etc/logstash/conf.d/logstash.conf
 
 sudo systemctl start elasticsearch
 sudo systemctl start kibana
+sudo /usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/logstash.conf
 sudo /usr/share/logstash/bin/logstash "--path.settings" "/etc/logstash" -f /etc/logstash/conf.d/logstash.conf
+
+bin/logstash -f <logstash.conf> --path.data PATH
+
+sudo /usr/share/logstash/bin/logstash --path.settings /etc/logstash/ --path.data sensor39 -f /etc/logstash/conf.d/logstash.conf --config.reload.automatic
+
+ps aux | grep logstash
+
+kubectl scale deployment backend-deployment --replicas=0
+
+kubectl port-forward backend-deployment-5b65fdb568-nnglt 8080:8080
+
+
+
+kubectl port-forward --address 172.16.238.164 backend-deployment-5d9d4b95df-t7ncz 8080:8080
+
+sudo lsof -i :9601
+
 
 
 
